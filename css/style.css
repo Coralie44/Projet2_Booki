@@ -9,6 +9,24 @@
     --filter-bg-color: #DEEBFF;
 }
 
+.logo_booki {
+    width: 61px;
+    height: 19px;
+    padding-top: 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 63px;
+}
+
+.bouton_hebergements:hover, .bouton_activites:hover {
+    border-top: solid;
+    border-color: #0065FC;
+    padding: 16px; 
+}
+
 .fa-solid {
     color: var(--main-color);
 }
