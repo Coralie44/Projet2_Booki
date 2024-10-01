@@ -18,13 +18,14 @@
 nav {
     display: flex;
     justify-content: flex-end;
+    align-items: flex-start;
     padding-bottom: 63px;
+    gap: 68px;
 }
 
-.bouton_hebergements:hover, .bouton_activites:hover {
-    border-top: solid;
-    border-color: #0065FC;
-    padding: 16px; 
+nav a:hover {
+    border-top: 2px solid #0065FC;
+    padding: 16px;
 }
 
 .fa-solid {
