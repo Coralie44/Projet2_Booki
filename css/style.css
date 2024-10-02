@@ -12,7 +12,6 @@
 header {
     display: flex;
     justify-content: space-between;
-    padding-top: 16px;
 }
 
 .logo_booki {
@@ -21,9 +20,17 @@ header {
     padding: 30px 0px 60px 0px;
 }
 
-nav a:hover {
-    border-top: 2px solid #0065FC;
-    padding: 16px;
+.menu_nav_item:hover {
+    border-top: 2px solid var(--main-color);
+    width: 100%;
+    padding-top: 14px;
+}
+
+ul {
+    display: flex;
+    gap: 68px;
+    list-style-type: none;
+
 }
 
 h1 {
@@ -37,29 +44,31 @@ p {
 
 .formulaire_recherche {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: row;
     align-items: center;
     margin-bottom: 35px;
 }
 
-.pointeur-GM {
-    background-color:#F2F2F2;
-    padding: 14px 18px 14px 18px;
+.fa-location-dot {
+    background-color: var(--main-bg-color);
+    padding: 16px 18px 16px 18px;
     border-radius: 10px 0px 0px 10px;
 }
 
+
+
 .champs_recherche {
-    border: 1px solid #F2F2F2;
+    border: 1px solid var(--main-bg-color);
     padding: 15px 24px 15px 24px;
     font-weight: bold;
 }
 
 .bouton-rechercher {
-    background-color: #0065FC;
+    background-color: var(--main-color);
     padding: 16px 16px 16px 16px;
     border: none;
     border-radius: 0px 10px 10px 0px;
-    color: #DEEBFF;
+    color: white;
     font-weight: bold;
 }
 
@@ -87,6 +96,7 @@ p {
 body {
     display: flex;
     justify-content: center;
+    margin: 0;
 }
 
 .main-container {
