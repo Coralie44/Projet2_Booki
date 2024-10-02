@@ -12,7 +12,7 @@
 header {
     display: flex;
     justify-content: space-between;
-    padding-top: 14px;
+    padding-top: 16px;
 }
 
 .logo_booki {
@@ -24,6 +24,15 @@ header {
 nav a:hover {
     border-top: 2px solid #0065FC;
     padding: 16px;
+}
+
+h1 {
+    margin-bottom: 8px;
+}
+
+p {
+    margin-top: 8px;
+    margin-bottom: 35px;
 }
 
 .formulaire_recherche {
@@ -52,6 +61,23 @@ nav a:hover {
     border-radius: 0px 10px 10px 0px;
     color: #DEEBFF;
     font-weight: bold;
+}
+
+.zone_filtres {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 17px;
+    margin-bottom: 37px;
+}
+
+.eco {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border: 2px solid #F2F2F2;
+    border-radius: 25px 25px 25px 25px;
+    gap: 10px;
 }
 
 .fa-solid {
