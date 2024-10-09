@@ -7,6 +7,9 @@
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
+    --dark-grey: #d9d9d9;
+    --black: #000;
+    --white: #fff;
 }
 
 header {
@@ -52,6 +55,11 @@ p {
     background-color: var(--main-bg-color);
     padding: 18px 18px 18px 18px;
     border-radius: 14px 0px 0px 14px;
+    font-size: 22px;
+}
+
+.icone-marqueur {
+    color: var(--black);
 }
 
 .champs_recherche {
@@ -67,7 +75,7 @@ p {
     padding: 15px 16px 15px 16px;
     border: none;
     border-radius: 0px 14px 14px 0px;
-    color: white;
+    color: var(--white);
     font-size: 1.5em;
     font-weight: bold;
 }
@@ -88,7 +96,7 @@ p {
     display: flex;
     align-items: center;
     padding: 15px;
-    border: 2px solid var(--main-bg-color);
+    border: 2px solid var(--dark-grey);
     border-radius: 50px 50px 50px 50px;
     gap: 10px;
 }
@@ -115,9 +123,14 @@ p {
     text-align: center;
 }
 
-.fa-solid {
+.zone_filtres .fa-solid, 
+.hebergements-and-populaires .fa-solid {
     color: var(--main-color);
     font-size: 22px;
+}
+
+.point_info .fa-solid {
+    color: var(--main-color);
 }
 
 body {
@@ -162,7 +175,7 @@ a {
     font-weight: 700;
 }
 
-.neutral-star {
+.card-rating .neutral-star {
     color: var(--main-bg-color)
 }
 
@@ -183,27 +196,25 @@ a {
 .hebergements {
     width: 65%;
     display: flex;
+    flex-direction: column;
     gap: 30px;
 }
 
-.hebergements-titre {
-    display: flex;
-    align-items: flex-start;
-}
-
-.hebergements-cards .card {
-    margin-top: 30px;
+.hebergements-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    gap: 30px;
 }
 
 .hebergements-cards img {
     width: 100%;
-    height: 160px;
+    height: 110px;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 20px 20px 0px 0px;
 }
 
 .hebergements-cards .card-content {
-    width: 67%;
+    width: 100%;
     padding-left: 15px;
     box-sizing: border-box;
 }
@@ -316,5 +327,10 @@ a {
 
     .bouton_icone {
         display: inline;
+        color: var(--white);
+    }
+
+    .loupe-mobile .fa-solid {
+        color: var(--white);
     }
 }
