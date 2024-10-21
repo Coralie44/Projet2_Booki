@@ -20,6 +20,7 @@ body {
 .main-container {
     width: 100%;
     max-width: 1440px;
+    padding: 0 50px;
 }
 
 header {
@@ -104,33 +105,27 @@ p {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 17px;
-    margin-bottom: 37px;
+    gap: 15px;
+    margin-bottom: 35px;
 }
 
-.filter-field-container {
+.filter-bar {
     display: flex;
-    flex-direction: row;
-    gap: 17px;
+    gap: 15px;
 }
 
-.eco, .family, .romantic, .gems {
-    display: flex;
+.filter-button {
     align-items: center;
+    background-color: var(--white);
+    font-size: 1.5em;
+    font-weight: bold;
     padding: 15px;
     border: 2px solid var(--dark-grey);
     border-radius: 50px 50px 50px 50px;
     gap: 10px;
 }
 
-.filter-button {
-    border: none;
-    background-color: var(--white);
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.eco:active, .family:active, .romantic:active, .gems:active {
+.filter-button:hover {
     background-color: var(--filter-bg-color);
 }
 
@@ -345,39 +340,22 @@ footer {
 
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    .main-container {
-        width: 100%;
-        max-width: 1024px;
-        box-sizing: border-box;
-    }
-
-    header {
-        padding: 0 30px;
-    }
-
-    .nav-menu ul {
-        flex-direction: row;
-        gap: 68px;
-    }
-
+@media screen and (max-width: 1024px) {
     .filter-field {
-        display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
     }
 
-    .filter-field-container {
-        display: flex;
-        flex-direction: row;
+    .filter-title {
+        width: 100%;
     }
 
     .accommodations-and-popular {
         display: flex;
         flex-direction: column;
+        padding-right: 50px;
     }
 
     .accommodations {
-        background-color: var(--white);
         width: 100%;
     }
 
@@ -390,10 +368,11 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        gap: 20px;
     }
 
     .popular-cards a {
-        width: 30%;
+        width: 100%;
     }
 
     .popular-cards .card-title {
@@ -403,15 +382,15 @@ footer {
     .popular-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .container-card {
+        grid-template-columns: repeat(auto-fit, minmax(calc((100% / 4) - 90px), 1fr));
+    }
+
 }
 
 /* Small devices (phones, less than 768px) */
 @media screen and (max-width: 767px) {
-    .main-container {
-        width: 100%;
-        max-width: 767px;        
-    }
-
     header {
         flex-direction: column;
     }
