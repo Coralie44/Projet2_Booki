@@ -12,6 +12,17 @@
     --white: #fff;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 50px;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -23,7 +34,13 @@ header {
     padding: 30px 0px 60px 0px;
 }
 
-.nav-menu-item:hover {
+.nav-menu-item-accommodations:hover, .nav-menu-item-activities:hover {
+    border-top: 2px solid var(--main-color);
+    width: 100%;
+    padding-top: 14px;
+}
+
+.nav-menu-item-accommodations {
     border-top: 2px solid var(--main-color);
     width: 100%;
     padding-top: 14px;
@@ -68,7 +85,6 @@ p {
     margin-right: -5px;
     font-size: 1.5em;
     font-weight: bold;
-
 }
 
 .search-button {
@@ -89,27 +105,27 @@ p {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 17px;
-    margin-bottom: 37px;
+    gap: 15px;
+    margin-bottom: 35px;
 }
 
-.eco, .famille, .romantique, .pepites {
+.filter-bar {
     display: flex;
+    gap: 15px;
+}
+
+.filter-button {
     align-items: center;
+    background-color: var(--white);
+    font-size: 1.5em;
+    font-weight: bold;
     padding: 15px;
     border: 2px solid var(--dark-grey);
     border-radius: 50px 50px 50px 50px;
     gap: 10px;
 }
 
-.filter-button {
-    border: none;
-    background-color: white;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.eco:active, .famille:active, .romantique:active, .pepites:active, .filter-button:active {
+.filter-button:hover {
     background-color: var(--filter-bg-color);
 }
 
@@ -129,26 +145,13 @@ p {
 }
 
 .filter-field .fa-solid, 
-.hebergements-and-populaires .fa-solid {
+.accommodations-and-popular .fa-solid {
     color: var(--main-color);
     font-size: 22px;
 }
 
 .info-section .fa-solid {
     color: var(--main-color);
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-}
-
-.main-container {
-    width: 100%;
-    max-width: 1440px;
-    padding: 0 50px;
-    box-sizing: border-box;
 }
 
 a {
@@ -185,84 +188,84 @@ a {
 }
 
 /****** Hebergements And Populaires ***********/
-.hebergements-and-populaires {
+.accommodations-and-popular {
     display: flex;
     justify-content: space-between;
-}
-
-.hebergements-and-populaires section {
-    background-color: var(--main-bg-color);
-    border-radius: 20px;
-    padding: 30px;
-    box-sizing: border-box;
+    gap: 40px;
 }
 
 /****** Hebergements ***********/
-.hebergements {
+.accommodations {
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 30px;
     width: 65%;
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-.hebergements-cards {
+.accommodations-cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
     gap: 30px;
 }
 
-.hebergements-cards img {
+.accommodations-cards img {
     width: 100%;
-    height: 110px;
+    height: 89px;
     object-fit: cover;
     border-radius: 20px 20px 0px 0px;
 }
 
-.hebergements-cards .card-content {
+.accommodations-cards .card-content {
     width: 100%;
     padding-left: 15px;
     box-sizing: border-box;
 }
 
-.hebergements-cards .card-title {
+.accommodations-cards .card-title {
     margin-top: 10px;
     margin-bottom: 8px;
 }
 
-.hebergements-cards .card-subtitle {
+.accommodations-cards .card-subtitle {
     margin: 0;
     margin-bottom: 8px;
 }
 
-.hebergements-cards .card-rating {
+.accommodations-cards .card-rating {
     padding-top: 8px;
     margin-bottom: 5px;
 }
 
 /****** Populaires ***********/
-.populaires {
+.popular {
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 30px;
     width: 32%;
 }
 
-.populaires-title {
+.popular-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.populaires-cards .card {
+.popular-cards .card {
     display: flex;
     margin-top: 33px;
 }
 
-.populaires-cards img {
+.popular-cards img {
     width: 33%;
     height: 136px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
 
-.populaires-cards .card-content {
+.popular-cards .card-content {
     width: 67%;
     padding-left: 15px;
     display: flex;
@@ -271,21 +274,21 @@ a {
     box-sizing: border-box;
 }
 
-.populaires-cards .card-title {
+.popular-cards .card-title {
     margin-top: 10px;
     margin-bottom: 4px;
 }
 
-.populaires-cards .card-subtitle {
+.popular-cards .card-subtitle {
     margin: 0;
 }
 
-.populaires-cards .card-rating {
+.popular-cards .card-rating {
     margin-bottom: 5px;
 }
 
 /**** Activités à Marseille ****/
-.activites-marseille {
+.activities-marseille {
     margin-top: 65px;
     gap: 30px;
     display: flex;
@@ -298,25 +301,24 @@ a {
     gap: 30px;
 }
 
-.activites-marseille .card-activites {
+.activities-marseille .card-activities {
     background-color: var(--white);
     border-radius: 20px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
     width: 100%;
-    height: 439px;
+    height: 100%;
 }
 
-.activites-marseille img {
+.card-activities img {
     border-radius: 20px 20px 0px 0px;
     width: 100%;
-    height: 380px;
+    height: 89%;
     object-fit: cover;
 }
 
-.activites-marseille h3 {
+.activities-marseille h3 {
     padding-left: 15px;
 }
-
 
 /**** Footer ****/
 footer {
@@ -327,7 +329,7 @@ footer {
     padding-left: 20px;
 }
 
-.menu-a-propos, .menu-nos-hebergements, .menu-assistance {
+.about-menu, .accommodations-menu, .help-menu {
     display: grid;
     grid-template-rows: repeat(auto-fit, 3fr);
     padding-left: 0px;
@@ -338,46 +340,116 @@ footer {
 
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
-@media screen and (min-width: 768px) and (max-width: 1023.98px) {
-    .hebergements-and-populaires {
-        flex-direction: column;
+@media screen and (max-width: 1024px) {
+    .filter-field {
+        flex-wrap: wrap;
     }
 
-    .hebergements {
+    .filter-title {
         width: 100%;
     }
 
-    .populaires {
+    .accommodations-and-popular {
+        display: flex;
+        flex-direction: column;
+        padding-right: 50px;
+    }
+
+    .accommodations {
+        width: 100%;
+    }
+
+    .popular {
         width: 100%;
         margin-top: 50px;
     }
 
-    .populaires-cards {
+    .popular-cards {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        gap: 20px;
     }
 
-    .populaires-cards a {
-        width: 30%;
+    .popular-cards a {
+        width: 100%;
     }
 
-    .populaires-cards .card-title {
+    .popular-cards .card-title {
         font-size: 14px;
     }
 
-    .populaires-cards .card-subtitle {
+    .popular-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .container-card {
+        grid-template-columns: repeat(auto-fit, minmax(calc((100% / 4) - 90px), 1fr));
+    }
+
 }
 
 /* Small devices (phones, less than 768px) */
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 767px) {
+    header {
+        flex-direction: column;
+    }
+
+    .nav-menu-item-accommodations {
+        border-bottom: 2px solid var(--main-color);
+        padding-bottom: 14px;
+    }
+
+    .search-infos, .filter-field, .info-section, .accommodations, .activities-marseille {
+        padding-left: 20px;
+    }
+
+    .filter-field {
+        flex-direction: column;
+        gap: 5px;
+    }
+
     .text-button {
         display: none;
     }
 
     .glass-mobile .fa-solid {
         color: var(--white);
+    }
+
+    .accommodations-and-popular {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .accommodations {
+        background-color: var(--white);
+        width: 100%;
+    }
+
+    .accommodations-cards .card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .popular {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .container-card {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .container-card .card-title {
+        padding-bottom: 20px;
+    }
+
+    footer {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 }
