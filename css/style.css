@@ -15,6 +15,7 @@
 body {
     display: flex;
     justify-content: center;
+    margin: 0;
 }
 
 .main-container {
@@ -31,7 +32,7 @@ header {
 .logo-booki {
     width: 61px;
     height: 19px;
-    padding: 30px 0px 60px 0px;
+    padding: 30px 0px 50px 0px;
 }
 
 .nav-menu-item-accommodations:hover, .nav-menu-item-activities:hover {
@@ -44,6 +45,7 @@ header {
     border-top: 2px solid var(--main-color);
     width: 100%;
     padding-top: 14px;
+    font-size: 16px;
 }
 
 ul {
@@ -54,25 +56,27 @@ ul {
 
 h1 {
     margin-bottom: 8px;
+    font-size: 22px;
 }
 
 p {
     margin-top: 8px;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
+    font-size: 16px;
 }
 
 .search-form {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
 }
 
 .fa-location-dot {
     background-color: var(--main-bg-color);
     padding: 18px 18px 18px 18px;
     border-radius: 14px 0px 0px 14px;
-    font-size: 22px;
+    font-size: 17px;
 }
 
 .maps-icon {
@@ -83,7 +87,7 @@ p {
     border: 1px solid var(--main-bg-color);
     padding: 14px 24px 14px 24px;
     margin-right: -5px;
-    font-size: 1.5em;
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -93,7 +97,7 @@ p {
     border: none;
     border-radius: 0px 14px 14px 0px;
     color: var(--white);
-    font-size: 1.5em;
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -106,7 +110,7 @@ p {
     flex-direction: row;
     align-items: center;
     gap: 15px;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
 }
 
 .filter-bar {
@@ -117,7 +121,7 @@ p {
 .filter-button {
     align-items: center;
     background-color: var(--white);
-    font-size: 1.5em;
+    font-size: 17px;
     font-weight: bold;
     padding: 15px;
     border: 2px solid var(--dark-grey);
@@ -147,7 +151,6 @@ p {
 .filter-field .fa-solid, 
 .accommodations-and-popular .fa-solid {
     color: var(--main-color);
-    font-size: 22px;
 }
 
 .info-section .fa-solid {
@@ -232,10 +235,10 @@ a {
 .accommodations-cards .card-subtitle {
     margin: 0;
     margin-bottom: 8px;
+    font-size: 14px;
 }
 
 .accommodations-cards .card-rating {
-    padding-top: 8px;
     margin-bottom: 5px;
 }
 
@@ -255,7 +258,7 @@ a {
 
 .popular-cards .card {
     display: flex;
-    margin-top: 33px;
+    margin-top: 30px;
 }
 
 .popular-cards img {
@@ -281,6 +284,7 @@ a {
 
 .popular-cards .card-subtitle {
     margin: 0;
+    font-size: 14px;
 }
 
 .popular-cards .card-rating {
@@ -290,14 +294,14 @@ a {
 /**** Activités à Marseille ****/
 .activities-marseille {
     margin-top: 65px;
-    gap: 30px;
+    gap: 20px;
     display: flex;
     flex-direction: column;
 }
 
 .container-card {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(23%, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(22%, 1fr));
     gap: 30px;
 }
 
@@ -312,7 +316,7 @@ a {
 .card-activities img {
     border-radius: 20px 20px 0px 0px;
     width: 100%;
-    height: 89%;
+    height: 439px;
     object-fit: cover;
 }
 
@@ -323,6 +327,7 @@ a {
 /**** Footer ****/
 footer {
     background-color: var(--main-bg-color);
+    width: 100%;
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(33%, 3fr));
     margin-top: 65px;
@@ -340,13 +345,17 @@ footer {
 
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
     .filter-field {
         flex-wrap: wrap;
     }
 
     .filter-title {
         width: 100%;
+    }
+
+    .filter-button {
+        font-size: 16px;
     }
 
     .accommodations-and-popular {
@@ -361,7 +370,6 @@ footer {
 
     .popular {
         width: 100%;
-        margin-top: 50px;
     }
 
     .popular-cards {
@@ -387,37 +395,81 @@ footer {
         grid-template-columns: repeat(auto-fit, minmax(calc((100% / 4) - 90px), 1fr));
     }
 
+    .card-activities img {
+        border-radius: 20px 20px 0px 0px;
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
 }
 
 /* Small devices (phones, less than 768px) */
 @media screen and (max-width: 767px) {
+    .main-container {
+        padding: 0;
+    }
+
     header {
         flex-direction: column;
+        padding-bottom: 15px;
     }
 
-    .nav-menu-item-accommodations {
+    header .logo-booki {
+       display: flex;
+       justify-self: center;
+       align-self: center;
+    }
+
+    .nav-menu-item-accommodations, .nav-menu-item-accommodations:hover, .nav-menu-item-activities:hover {
         border-bottom: 2px solid var(--main-color);
         padding-bottom: 14px;
+        border-top: none;
     }
 
-    .search-infos, .filter-field, .info-section, .accommodations, .activities-marseille {
-        padding-left: 20px;
-    }
-
-    .filter-field {
-        flex-direction: column;
-        gap: 5px;
+    .search-infos, .filter-field, .info-section, .accommodations {
+        padding: 0 0 0 15px;
     }
 
     .text-button {
         display: none;
     }
 
-    .glass-mobile .fa-solid {
+    .glass-button {
+        display: flex;
         color: var(--white);
     }
 
+    .search-field {
+        width: 182px;
+    }
+
+    .search-button {
+        border-radius: 14px 14px 14px 14px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .filter-field {
+        flex-wrap: wrap;
+        margin: 0;
+        padding-bottom: 35px;
+    }
+    
+    .filter-title {
+        width: 100%;
+    }
+
+    .filter-bar {
+        flex-wrap: wrap;
+    }
+
+    .filter-button {
+        width: 47%;
+        font-size: 14px;
+        padding-right: ;
+    }
+
     .accommodations-and-popular {
+        width: 100%;
         display: flex;
         flex-direction: column-reverse;
     }
@@ -427,20 +479,34 @@ footer {
         width: 100%;
     }
 
-    .accommodations-cards .card {
+    .accommodations-cards {
         display: flex;
         flex-direction: column;
+        padding-right: 30px;
     }
 
     .popular {
         width: 100%;
         border-radius: 0;
+        padding: 30px 30px 30px 20px;
+    }
+
+    .popular-cards {
+        display: flex;
+        flex-direction: column;
+        padding-right: 35px;
+        gap: 0;
+    }
+
+    .activities-marseille {
+        padding: 0 0 0 30px;
     }
 
     .container-card {
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        gap: 5px;
+        padding-right: 30px;
     }
 
     .container-card .card-title {
