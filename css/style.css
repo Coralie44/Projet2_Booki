@@ -21,6 +21,7 @@ body {
 .main-container {
     width: 100%;
     max-width: 1440px;
+    box-sizing: border-box;
     padding: 0 50px;
 }
 
@@ -414,7 +415,7 @@ footer {
         padding-bottom: 15px;
     }
 
-    header .logo-booki {
+    .logo-booki {
        display: flex;
        justify-self: center;
        align-self: center;
