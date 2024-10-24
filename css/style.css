@@ -115,7 +115,7 @@ p {
 
 .filter-bar {
     display: flex;
-    gap: 15px;
+    gap: 10px;
 }
 
 .filter-button {
@@ -142,9 +142,9 @@ p {
 .info-icon {
     border-radius: 50%;
     border: 2px solid var(--main-bg-color);
-    width: 30px;
-    height: 30px;
-    line-height: 28px;
+    width: 24px;
+    height: 24px;
+    line-height: 23px;
     text-align: center;
 }
 
@@ -426,6 +426,11 @@ footer {
         border-top: none;
     }
 
+    .nav-menu-item-activities {
+        border-bottom: 2px solid var(--main-bg-color);
+        padding-bottom: 14px;
+    }
+
     .search-infos, .filter-field, .info-section, .accommodations {
         padding: 0 0 0 15px;
     }
@@ -440,7 +445,7 @@ footer {
     }
 
     .search-field {
-        width: 182px;
+        width: 196px;
     }
 
     .search-button {
@@ -460,12 +465,12 @@ footer {
 
     .filter-bar {
         flex-wrap: wrap;
+        padding-right: 10px;
     }
 
     .filter-button {
         width: 47%;
         font-size: 14px;
-        padding-right: ;
     }
 
     .accommodations-and-popular {
