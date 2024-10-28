@@ -49,10 +49,19 @@ header {
     font-size: 16px;
 }
 
+/* .nav-menu-item-activities {
+    border-top: 2px solid var(--main-color);
+    width: 100%;
+    padding-top: 16px;
+    font-size: 16px;
+    border-top: none;
+} */
+
 ul {
     display: flex;
     gap: 68px;
     list-style-type: none;
+    margin: 0;
 }
 
 h1 {
@@ -211,7 +220,7 @@ a {
 
 .accommodations-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(29%, 1fr));
     gap: 30px;
 }
 
@@ -329,7 +338,7 @@ a {
 footer {
     background-color: var(--main-bg-color);
     width: 100%;
-    display:grid;
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(33%, 3fr));
     margin-top: 65px;
     padding-left: 20px;
@@ -406,19 +415,31 @@ footer {
 
 /* Small devices (phones, less than 768px) */
 @media screen and (max-width: 767px) {
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
     .main-container {
         padding: 0;
+        margin: 0;
     }
 
     header {
+        display: flex;
         flex-direction: column;
         padding-bottom: 15px;
     }
 
-    .logo-booki {
-       display: flex;
-       justify-self: center;
-       align-self: center;
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-menu {
+        display: flex;
+        width: 100%;
     }
 
     .nav-menu-item-accommodations, .nav-menu-item-accommodations:hover, .nav-menu-item-activities:hover {
@@ -427,9 +448,16 @@ footer {
         border-top: none;
     }
 
+    .nav-menu-item-accommodations {
+        display: flex;
+        width: 50%;
+    }
+
     .nav-menu-item-activities {
+        display: flex;
         border-bottom: 2px solid var(--main-bg-color);
         padding-bottom: 14px;
+        width: 50%;
     }
 
     .search-infos, .filter-field, .info-section, .accommodations {
@@ -446,7 +474,7 @@ footer {
     }
 
     .search-field {
-        width: 196px;
+        width: 195px;
     }
 
     .search-button {
@@ -472,6 +500,9 @@ footer {
     .filter-button {
         width: 47%;
         font-size: 14px;
+        display: flex;
+        justify-content: flex-start;
+        gap: 10px;
     }
 
     .accommodations-and-popular {
@@ -494,13 +525,19 @@ footer {
     .popular {
         width: 100%;
         border-radius: 0;
-        padding: 30px 30px 30px 20px;
+        padding: 30px 0 30px 0;
+    }
+
+    .popular-title {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
 
     .popular-cards {
         display: flex;
         flex-direction: column;
-        padding-right: 35px;
+        padding: 0 20px 0 20px;
         gap: 0;
     }
 
@@ -512,7 +549,7 @@ footer {
         display: flex;
         flex-direction: column;
         gap: 5px;
-        padding-right: 30px;
+        padding-right: 25px;
     }
 
     .container-card .card-title {

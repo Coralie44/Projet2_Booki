@@ -23,25 +23,25 @@
   <body>
     <div class="main-container">
       <header>
-        <img
-          src="./images/logo/Booki.png"
-          alt="Logo Booki"
-          class="logo-booki"
-        />
-        <nav class="nav-menu">
-          <ul>
-            <li>
-              <a class="nav-menu-item-accommodations" href="#accommodations"
-                >Hébergements</a
-              >
-            </li>
-            <li>
-              <a class="nav-menu-item-activities" href="#activities-marseille"
-                >Activités</a
-              >
-            </li>
-          </ul>
-        </nav>
+        <div class="logo">
+          <img
+            src="./images/logo/Booki.png"
+            class="logo-booki"
+            alt="Logo Booki"
+          />
+        </div>
+        <div class="nav-menu">
+          <nav>
+            <ul>
+              <li class="nav-menu-item-accommodations">
+                <a href="#accommodations">Hébergements</a>
+              </li>
+              <li class="nav-menu-item-activities">
+                <a href="#activities-marseille">Activités</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </header>
 
       <main>
@@ -75,16 +75,20 @@
           </div>
           <div class="filter-bar">
             <button type="button" class="filter-button">
-              <i class="fa-solid fa-money-bill-wave"></i> Économique
+              <i class="fa-solid fa-money-bill-wave"></i>
+              <span>Économique</span>
             </button>
             <button type="button" class="filter-button">
-              <i class="fa-solid fa-person"></i> Familial
+              <i class="fa-solid fa-person"></i>
+              <span>Familial</span>
             </button>
             <button type="button" class="filter-button">
-              <i class="fa-solid fa-heart"></i> Romantique
+              <i class="fa-solid fa-heart"></i>
+              <span>Romantique</span>
             </button>
             <button type="button" class="filter-button">
-              <i class="fa-solid fa-fire"></i> Nos pépites
+              <i class="fa-solid fa-fire"></i>
+              <span>Nos pépites</span>
             </button>
           </div>
         </div>
@@ -283,7 +287,7 @@
                 <article class="card">
                   <img
                     src="./images/hebergements/emile-guillemot.jpg"
-                    alt="Image de la chambre d'hôtel montrant un lit"
+                    alt="Chambre d'hôtel verte montrant un lit"
                   />
                   <div class="card-content">
                     <div class="card-txt">
@@ -310,7 +314,7 @@
                 <article class="card">
                   <img
                     src="./images/hebergements/aw-creative.jpg"
-                    alt="Image de la chambre d'hôtel montrant un lit"
+                    alt="Chambre d'hôtel moderne montrant un lit"
                   />
                   <div class="card-content">
                     <div class="card-txt">
@@ -339,7 +343,7 @@
                 <article class="card">
                   <img
                     src="./images/hebergements/febrian-zakaria2.jpg"
-                    alt="Image de la chambre d'hôtel montrant un lit"
+                    alt="Chambre d'hôtel avec parquet montrant un lit"
                   />
                   <div class="card-content">
                     <div class="card-txt">
@@ -375,7 +379,7 @@
               <article class="card-activities">
                 <img
                   src="./images/activites/reno-laithienne.jpg"
-                  alt="Photo du Vieux Port de Marseille"
+                  alt="Vieux Port de Marseille"
                 />
                 <h3 class="card-title">Vieux-Port</h3>
               </article>
@@ -384,7 +388,7 @@
               <article class="card-activities">
                 <img
                   src="./images/activites/paul-hermann.jpg"
-                  alt="Photo du Forts de Pomègues"
+                  alt="Fort de Pomègues"
                 />
                 <h3 class="card-title">Fort de Pomègues</h3>
               </article>
@@ -393,7 +397,7 @@
               <article class="card-activities">
                 <img
                   src="./images/activites/kilyan-sockalingum.jpg"
-                  alt="Photo du Parc national des Calanques"
+                  alt="Parc national des Calanques"
                 />
                 <h3 class="card-title">Parc national des Calanques</h3>
               </article>
@@ -402,7 +406,7 @@
               <article class="card-activities">
                 <img
                   src="./images/activites/florian-wehde.jpg"
-                  alt="Photo de Notre-Dame-de-la-Garde"
+                  alt="Notre-Dame-de-la-Garde"
                 />
                 <h3 class="card-title">Notre-Dame-de-la-Garde</h3>
               </article>
