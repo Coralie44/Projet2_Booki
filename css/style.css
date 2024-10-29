@@ -36,33 +36,35 @@ header {
     padding: 30px 0px 50px 0px;
 }
 
-.nav-menu-item-accommodations:hover, .nav-menu-item-activities:hover {
-    border-top: 2px solid var(--main-color);
-    width: 100%;
-    padding-top: 14px;
+.nav-menu ul {
+    display: flex;
+    gap: 68px;
+    align-items: flex-start;
+    list-style-type: none;
+    margin: 0;
 }
 
-.nav-menu-item-accommodations {
-    border-top: 2px solid var(--main-color);
-    width: 100%;
-    padding-top: 14px;
-    font-size: 16px;
-}
-
-.nav-menu-item-activities {
-    border-top: 2px solid var(--main-color);
-    width: 100%;
+.nav-menu li {
     padding-top: 16px;
-    font-size: 16px;
-    border-top: none;
+    text-align: center;
 }
 
-ul {
+.nav-menu li:hover {
+    border-top: 2px solid var(--main-color);
+}
+
+/* .nav-menu ul {
     display: flex;
     gap: 68px;
     list-style-type: none;
     margin: 0;
+    padding-top: 18px;
 }
+
+.nav-menu a:hover {
+    border-top: 2px solid var(--main-color);
+    padding-top: 16px;
+} */
 
 h1 {
     margin-bottom: 8px;
@@ -341,7 +343,6 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(33%, 3fr));
     margin-top: 65px;
-    /* padding-left: 20px; */
 }
 
 .about-menu, .accommodations-menu, .help-menu {
@@ -349,6 +350,7 @@ footer {
     grid-template-rows: repeat(auto-fit, 3fr);
     padding-left: 20px;
     gap: 15px;
+    list-style-type: none;
 }
 
 footer h3 {
@@ -432,31 +434,30 @@ footer h3 {
     header {
         display: flex;
         flex-direction: column;
-        padding-bottom: 15px;
+        padding-bottom: 30px;
     }
 
-    .logo {
+    .logo-booki {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-self: center;
+        align-self: center;
     }
 
-    .nav-menu {
-        display: flex;
+    .nav-menu ul {
         width: 100%;
+        padding: 0;
+        gap: 0;
     }
 
-    .nav-menu-item-accommodations, .nav-menu-item-accommodations:hover, .nav-menu-item-activities:hover {
-        border-bottom: 2px solid var(--main-color);
-        padding-bottom: 14px;
-        border-top: none;
-    }
-
-    .nav-menu-item-activities a {
-        display: flex;
+    .nav-menu li {
+        padding-bottom: 16px;
+        width: 50%;
         border-bottom: 2px solid var(--main-bg-color);
-        padding-bottom: 14px;
-        width: 100%;
+    }
+
+    .nav-menu li:hover {
+        border-top: none;
+        border-bottom: 2px solid var(--main-color);
     }
 
     .search-infos, .filter-field, .info-section, .accommodations {
