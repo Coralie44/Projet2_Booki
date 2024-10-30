@@ -437,10 +437,10 @@ footer h3 {
         padding-bottom: 30px;
     }
 
-    .logo-booki {
+    .logo {
         display: flex;
-        justify-self: center;
-        align-self: center;
+        justify-content: center;
+        align-items: center;
     }
 
     .nav-menu ul {
