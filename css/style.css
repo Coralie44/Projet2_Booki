@@ -53,19 +53,6 @@ header {
     border-top: 2px solid var(--main-color);
 }
 
-/* .nav-menu ul {
-    display: flex;
-    gap: 68px;
-    list-style-type: none;
-    margin: 0;
-    padding-top: 18px;
-}
-
-.nav-menu a:hover {
-    border-top: 2px solid var(--main-color);
-    padding-top: 16px;
-} */
-
 h1 {
     margin-bottom: 8px;
     font-size: 22px;
