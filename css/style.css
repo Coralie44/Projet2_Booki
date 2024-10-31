@@ -447,7 +447,7 @@ footer h3 {
         border-bottom: 2px solid var(--main-color);
     }
 
-    .search-infos, .filter-field, .info-section, .accommodations {
+    .search-infos, .filter-field, .info-section {
         padding: 0 0 0 15px;
     }
 
@@ -496,17 +496,23 @@ footer h3 {
         width: 100%;
         display: flex;
         flex-direction: column-reverse;
+        padding-right: 0;
     }
 
     .accommodations {
         background-color: var(--white);
         width: 100%;
+        padding: 0;
+    }
+
+    .accommodations h2 {
+        padding-left: 20px;
     }
 
     .accommodations-cards {
         display: flex;
         flex-direction: column;
-        padding-right: 30px;
+        padding: 0 20px 0 20px;
     }
 
     .popular {
